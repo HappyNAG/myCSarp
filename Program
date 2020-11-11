@@ -17,6 +17,9 @@ class Program
         Task3 Task3 = new Task3();
         Task3.Main();
 
+        // Четвёртое задание
+        Task4 Task4 = new Task4();
+        Task4.Main();
     }
 
 }
