@@ -1,0 +1,37 @@
+using System;
+
+class Task4
+{
+    public void Main() 
+    {
+        //Реализовать метод проверки логина и пароля. На вход подается логин и пароль. 
+        //На выходе истина, если прошел авторизацию, и ложь, если не прошел (Логин: root, Password: GeekBrains). 
+        //Используя метод проверки логина и пароля, написать программу: пользователь вводит логин и пароль, программа пропускает его дальше или не пропускает. 
+        //С помощью цикла do while ограничить ввод пароля тремя попытками.
+        string log = "root";
+        string pass = "GeekBrains";
+
+        int count = 0;
+        do
+        {
+            Console.WriteLine("\nВведите логин: ");
+            string checkLog = Console.ReadLine();
+
+            Console.WriteLine("Введите пароль: ");
+            string checkPass = Console.ReadLine();
+
+            if (log == checkLog && pass == checkPass)
+            {
+
+                Console.WriteLine("Добро пожаловать");
+                Console.ReadKey();
+                break;
+            }
+            Console.Clear();
+            Console.WriteLine("Неверно введен логин или пароль, попробуйте еще раз.");
+            ++count;
+        } while (count < 3);
+        Console.WriteLine("Аккаунт заблокирован, попробуйте еще раз через 24 часа.");
+        Console.ReadKey();
+    }
+}
