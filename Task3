@@ -1,0 +1,42 @@
+using System;
+
+class Task3
+{
+    static bool Odd(int a)
+    {
+        return a % 2 == 0;
+    }
+
+    public void Main() 
+    {
+        int n;
+        int Sum = 0;
+        Console.WriteLine("Необходимо ввести ряд чисел. Введите количество чилес ряда:");
+        n = Convert.ToInt32(Console.ReadLine());
+        int[] A = new int[n];
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine("Введите " + (i + 1) + " число, чтобы завершить введите 0");
+            A[i] = Convert.ToInt32(Console.ReadLine());
+            if (A[i] == 0) 
+            {
+                break;
+            }
+            else if (A[i] != 0 && Odd(A[i]))
+            {
+                Sum = Sum + A[i];
+            }
+            else
+            {
+                continue;
+            }
+          
+        }
+        Console.Clear();
+        Console.WriteLine("Сумма чётных чисел ряда равна: " + Sum);
+        Console.ReadKey();
+    }
+
+
+
+}
