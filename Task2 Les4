@@ -1,0 +1,42 @@
+using MyFourProjekt;
+using System;
+
+public class Task2
+{
+    //Реализовать конструктор, создающий массив заданной размерности и заполняющий массив числами от начального значения с заданным шагом.
+    private View view = new View();
+
+    public void Main()
+    {
+        int n, fir, h;
+
+        view.Print("Введите число элементов массива: ");
+        n = Convert.ToInt32(Console.ReadLine());
+
+        int[] myArray = new int[n];
+
+        view.Print("Введите число первого элемента массива: ");
+        fir = Convert.ToInt32(Console.ReadLine());
+        view.Print("Введите число - шаг изменения значений массива: ");
+        h = Convert.ToInt32(Console.ReadLine());
+        for (int i = 0; i < n; i++)
+        {
+            myArray[i] = fir + h * i;
+            view.Print((i + 1) + " = " + myArray[i]);
+            
+        }
+        Console.Clear();
+        view.PrintArray(myArray);
+
+        //Sum, которые возвращают сумму элементов массива
+        view.Print("Сумма элементов массива равна");
+        view.Sum(myArray);
+
+        //Inverse, меняющий знаки у всех элементов массива
+        view.Inv(myArray);
+
+        //Multi, умножающий каждый элемент массива на определенное число
+        view.Mult(myArray);
+        view.Pause();
+    }
+}
