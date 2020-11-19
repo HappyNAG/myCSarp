@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+
+    static void Main()
+    {
+        //Первое задание
+        Task1 Task1 = new Task1();
+        Task1.Main();
+
+        // Второе задание
+        Task2 Task2 = new Task2();
+        Task2.Main();
+
+        // Третье задание
+        Task3 Task3 = new Task3();
+        Task3.Main();
+
+        // Четвёртое задание
+        Task4 Task4 = new Task4();
+        Task4.Main();
+    }
+
+}
