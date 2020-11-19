@@ -1,0 +1,74 @@
+using System;
+
+namespace MyFourProjekt
+{
+    public class View
+    {
+        public void Pause()
+        {
+            Console.ReadKey();
+        }
+
+        public void PrintArray(int[] arr)
+        {
+            for (int index = 0; index < arr.Length; index++)
+            {
+                var i = arr[index];
+                Print($"{i}");
+            }
+        }
+
+        public void Print(object value, bool isNewLine = true)
+        {
+            if (isNewLine)
+            {
+                Console.WriteLine(value);
+            }
+            else
+            {
+                Console.Write(value);
+            }
+        }
+
+        //Sum, которые возвращают сумму элементов массива
+        public int Sum(int[] arr)
+        {
+            int s = 0;
+            for (int j = 0; j < arr.Length; j++)
+            {
+                s += arr[j];
+            }
+            Print(s);
+            return s;
+        }
+
+        //Inverse, меняющий знаки у всех элементов массива
+        public void Inv(int[] arr)
+        {
+            int[] resArr = new int[arr.Length];
+
+            Print("Инверсный массив");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                resArr[i] = arr[i] - (2 * arr[i]);
+                Print(resArr[i]);
+            }
+        }
+
+        //Multi, умножающий каждый элемент массива на определенное число
+        public void Mult(int[] arr)
+        {
+            int n;
+            int[] resArr = new int[arr.Length];
+            Print("Введите число, на которое необходимо умножить каждый элемент массива:");
+            n = Convert.ToInt32(Console.ReadLine());
+            Print("Мульти-массив:");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                resArr[i] = arr[i] * n;
+                Print(resArr[i]);
+            }
+        }
+
+    }
+}
