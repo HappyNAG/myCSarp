@@ -1,0 +1,19 @@
+using System;
+
+namespace MyFiveProject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Создать программу, которая будет проверять корректность ввода логина.
+            Task1 task1 = new Task1();
+            task1.Main();
+
+            //Разработать класс Message, содержащий следующие статические методы для обработки текста
+            Task2 task2 = new Task2();
+            task2.Main();
+
+        }
+    }
+}
